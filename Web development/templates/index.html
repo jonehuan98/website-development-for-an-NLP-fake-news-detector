@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Fake News Detection</title>
+      <link rel="stylesheet" href="\static\styles\mainpage.css"/>
+      <link class="favicon" rel="icon" href="\static\styles\t logo.PNG">
+   </head>
+   <body>
+      <div class="navbar">
+         <nav>
+            <ul class="primary-nav">
+               <li class="current"><a href="/">Home</a></li>
+               <li class="current"><a href="https://github.com/jonehuan98">The code</a></li>
+               <li class="current"><a href="https://github.com/jonehuan98">The paper</a></li>
+            </ul>
+         </nav>
+      </div>
+      <section class="hero">
+         <div class="container">
+            <h1>Twitter Fake News Prediction</h1>
+            <img src= "\static\styles\unnamed.png" class="twitterlogo" alt="twitter logo">
+            <div class="description">
+               <p class="description">This website uses machine learning to determine if a tweet contains Covid-19 Misinformation. 
+                  <span>To get a prediction, paste the link to the tweet, or copy the contents of the tweet into the text box.</span>
+               </p>
+            </div>
+         </div>
+      </section>
+      <section class="formz">
+         <div class="container">
+            <div class="formz">
+               <form id="package_form" action="" method="post">
+                  <!-- <label for="name">Name</label>
+                     <input type="text" id="name" name="name"> -->
+                  <label for="message"></label>
+                  <textarea name="message" id="message" cols="100" rows="2" placeholder="Paste Tweet link or ENTIRE text here">https://twitter.com/NICKIMINAJ/status/1437532566945341441?s=20</textarea>
+                  <input type="submit" name="linker" class="submitbutton" value="Predict from link">
+                  <input type="submit" name="texter" class="submitbutton" value="Predict from text">
+               </form>
+            </div>
+         </div>
+      </section>
+      <section class="rez">
+         <div class="result">
+            {{result | safe}}
+         </div>
+         {% if prediction==0 %}
+         <div class="superspreader">
+            <p><strong>Super spreader score: {{score}}%</strong></p>
+         </div>
+         {% endif %}
+         <div class="inputcontent">
+            {{content | safe}}
+         </div>
+         <div class="embed">
+            {{embed|safe}}
+         </div>
+         {% if displayfeedback==true %}
+         <form id="package_form" action="" method="post">
+            <!-- <label for="emptiness"></label>
+               <textarea name="emptiness" id="emptiness" cols="100" rows="2" placeholder="Emptiness"></textarea> -->
+            <div class="feedback">
+               <p>To train the AI: Do you think the Tweet actually contains misinformation?</p>
+               <input class="fbtrue" type="submit" name="fbtrue" class="feedbackbutton" value="No">
+               <input class="fbfake" type="submit" name="fbfake" class="feedbackbutton" value="Yes">
+               <input class="fbidk" type="submit" name="fbidk" class="feedbackbutton" value="Unsure">
+            </div>
+         </form>
+         {% endif %}
+      </section>
+   </body>
+</html>
