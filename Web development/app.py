@@ -9,16 +9,16 @@ import numpy as np
 
 # Tweepy API (v1)
 import tweepy
-auth = tweepy.OAuthHandler("tCmMikkyQmxGhjiUhA6Magg73", "leEFx2yRZcxiFrggaZ3As50pVT0JrGpxGhGMCiZVooBpVLz6D5")
-auth.set_access_token("791720150-PmveoVSvdh5GS9TK941PTU0jqNXMfoEvNaCcXy6S", "0MbJF2ImGweKudugOdDuYBdJkT0iYxyEuXKAeH9SSexMJ")
+auth = tweepy.OAuthHandler("", "")
+auth.set_access_token("", "")
 api = tweepy.API(auth)
 
 # TwitterAPI (v2)
 from TwitterAPI import TwitterAPI, TwitterOAuth, TwitterRequestError, TwitterConnectionError, TwitterPager
-consumer_key= "tCmMikkyQmxGhjiUhA6Magg73"
-consumer_secret= "leEFx2yRZcxiFrggaZ3As50pVT0JrGpxGhGMCiZVooBpVLz6D5"
-access_token_key= "791720150-PmveoVSvdh5GS9TK941PTU0jqNXMfoEvNaCcXy6S"
-access_token_secret= "0MbJF2ImGweKudugOdDuYBdJkT0iYxyEuXKAeH9SSexMJ"
+consumer_key= ""
+consumer_secret= ""
+access_token_key= ""
+access_token_secret= ""
 apiV2 = TwitterAPI(consumer_key, consumer_secret, access_token_key, access_token_secret, api_version='2')
 
 #create an instance of Flask
