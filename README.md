@@ -20,7 +20,7 @@ This directory is where the datasets used to train the classification models are
 ### `Web development/`
 This directory holds the web application code that provides a user-friendly interface for interacting with the classification models. The web application allows users to input data and receive predictions on potential super spreaders on social media.
 
-To interact with the model and make your own predictions, please go to this link: https://twitterfakenewsdetection.herokuapp.com/
+To interact with the model and make your own predictions, please go to: https://twitterfakenewsdetection.herokuapp.com/
 
 
 
