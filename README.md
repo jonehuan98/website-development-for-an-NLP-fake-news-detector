@@ -1,4 +1,4 @@
-# Project 201533109: Super Spreader Detection on Social Media
+Super Spreader Detection on Social Media
 
 ## Introduction
 
